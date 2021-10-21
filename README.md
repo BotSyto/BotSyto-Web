@@ -29,4 +29,4 @@ Página web implementada mediante la cual se otorgue acceso al chatbot y en este
 
 Link: https://docs.google.com/document/d/1pT8tmYJKQyBGZ2XkyqJDeaDWLyYueD0cvJh5j2a07P0/edit#heading=h.5yyugbgt71qd
 
-<a>Hola</a>
+<a href="www.google.com">Hola</a>
