@@ -27,4 +27,4 @@ Página web implementada mediante la cual se otorgue acceso al chatbot y en este
 
 # Documento de Visión
 
-<a target="_blank" href="https://docs.google.com/document/d/1pT8tmYJKQyBGZ2XkyqJDeaDWLyYueD0cvJh5j2a07P0/edit#heading=h.5yyugbgt71qd">Documento de Visión</a>
+<a target="_blank" href="https://docs.google.com/document/d/1pT8tmYJKQyBGZ2XkyqJDeaDWLyYueD0cvJh5j2a07P0">Click aquí para ver el Documento de Visión</a>
