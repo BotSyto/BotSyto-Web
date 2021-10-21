@@ -1,10 +1,24 @@
 # BotSyto
 
-Debido a la crisis sanitaria, la gran mayoría de locales que ofrecían servicios de tutoría se han visto afectados en sus ingresos, y a pesar de que en los últimos meses estos locales han tratado de recuperarse con los planes de reactivación económica que ofreció el gobierno, aún se ve un panorama incierto para este rubro ya que la cantidad de clientes a comparación de otros años ha registrado un descenso importante.
-Muchos centros de enseñanza han tenido que  cerrar sus locales a causa de los embates de la pandemia ya que los costos de alquiler, además de los sobrecostos de insumo y el bajo ritmo de atenciones durante la cuarentena fueron unas de las problemáticas que provocaron el cierre de dichos locales.
-Gran parte de estas instituciones no cuentan con un software que les ayude a desempeñar su negocio de manera virtual.
-Muchas de las personas que buscan aprender no cuentan con la disponibilidad de un tiempo fijo para agendar sus clases o llevarlas de manera presencial.
+Debido a la crisis sanitaria que se vive en el mundo, muchos centros de enseñanza a nivel nacional han tenido que cerrar sus locales y mudarse a sistemas educativos virtuales.
 
+Sin embargo, un gran porcentaje de estas instituciones educativas no contaban con un software que les ayude a impartir las clases de manera virtual y donde el estudiante pueda revisar posteriormente las lecciones desarrolladas si es que tuvo algún problema de conexión.
+
+Es por estas razones que muchos de los estudiantes se vieron obligados a desertar del sistema educativo en el Perú.
+
+Ante estas dificultades, proponemos una solución exitosa, que consiste en un sistema de tutoría que implemente un chatbot, mediante el cual se brinde el servicio de enseñanza de manera personalizada y que esté a la disposición del alumno en todo tiempo. A través de tutoriales y contenido educativo enfocado al aprendizaje integral del estudiante.
+
+# Herramientas Empleadas
+
+* HTML
+* CSS
+* REACT
+* MONGODB
+* JAVASCRIPT
+
+Página web implementada mediante la cual se otorgue acceso al chatbot y en este a su vez se empleen recursos educativos, de manera personalizada a cada estudiante en base a sus preferencias, intereses, estudios previos o actuales.
+
+# Integrantes
 
 - Estrada Cantaro Piero Ayrton
 - Garcia Cayetano Julissa Alisson
