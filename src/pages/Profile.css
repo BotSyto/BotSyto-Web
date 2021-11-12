@@ -1,0 +1,52 @@
+:root{
+    --main-bg-color: #262727;
+    --title: #1CC272;
+  }
+
+.icono{
+    transform: scale(1.2);
+    padding: 0 14px;
+    border: 4px solid var(--main-bg-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 420px;
+}
+
+.datosPersonales{
+    position: absolute;
+    width: 45rem;
+    height: 10rem;
+    background-color: white;
+    top: 120px;
+    left: 570px;
+    padding: 35px 20px 20px 40px;
+    border-radius: 20px;
+}
+
+.datosPersonales h2{
+    font-size: 18px;
+}
+
+.estadisticas{
+    position: absolute;
+    width: 50rem;
+    height: 24rem;
+    background-color: white;
+    top: 320px;
+    left: 400px;
+    padding: 25px 30px 30px 50px;
+    border-radius: 20px; 
+}
+
+.estadisticas h1{
+    text-align: center;
+    font-size: 40px;
+    margin:  0 0  30px 0;
+    text-decoration: underline;
+}
+
+.estadisticas h2{
+    font-size: 22px;
+    margin: 10px 0;
+}
