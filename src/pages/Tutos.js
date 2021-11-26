@@ -33,9 +33,9 @@ function Tutos(props) {
                     title="Biología"
                     text="En este tutorial, aprenderás los conceptos básicos acerca de las ciencias biológicas"
                 />
-            <CardTuto
-                    title="Cálculo de integrales"
-                    text="En este tutorial, aprenderás a usar las diversas técnicas que se emplean para el cálculo de integrales"
+                <CardTuto
+                    title="Cálculo de probabilidades"
+                    text="En este tutorial, aprenderás a usar las diversas técnicas que se emplean para el cálculo de probabilidades"
                 />
                 <CardTuto
                     title="Cálculo de derivadas"

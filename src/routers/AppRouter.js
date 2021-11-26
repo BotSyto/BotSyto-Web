@@ -4,21 +4,51 @@ import Navbar from '../components/Navbar';
 import Profile from '../pages/Profile';
 import Tutos from '../pages/Tutos';
 import MisTutos from '../pages/MisTutos';
+import NotFoundPage from '../pages/NotFoundPage';
+import IniciarSesion from '../pages/IniciarSesion';
+import Registro from '../pages/Registro';
 import Start from '../components/Start';
 import Question from '../components/Question';
 import quizData from '../data/quiz.json';
-import NotFoundPage from '../pages/NotFoundPage';
-import IniciarSesion from '../pages/IniciarSesion';
+import { useState } from 'react';
+import TutosCreados from '../pages/TutosCreados';
+import CrearTutos from '../pages/CrearTutos';
+import Resultados from '../pages/Resultados';
 
-export default function AppRouter(){
+import Chatbot from '../components/Chatbot';
+import EditarTuto from '../pages/EditarTuto';
+import '../App.css';
+
+const AppRouter = () => {
+
+    const [step, setStep] = useState(1);
+    const [activeQuestion, setActiveQuestion] = useState(0);
+    const [answers, setAnswers] = useState([]);
+
+    const quizStartHandler = ()=>{
+        setStep(2);
+    }
+
     return(
+        
         <Router>
+            
             <Navbar/>
             <Switch>
 
             <Route path='/' exact component={Home} />
 
-            <Route path='/start' component={Start} />
+            <Route path='/start'>
+                {step===1 && <Start onQuizStart={quizStartHandler} />}
+                {step===2 && <Question 
+                    data = {quizData.data[activeQuestion]}
+                    onAnswerUpdate={setAnswers}
+                    numberOfQuestions={quizData.data.length}
+                    activeQuestion={activeQuestion}
+                    onSetActiveQuestion={setActiveQuestion}
+                    onSetStep={setStep} 
+                />}
+            </Route>
 
             <Route path='/question' component={Question} />
 
@@ -31,6 +61,11 @@ export default function AppRouter(){
             </Route>
 
             <Route path='/mistutos' component={MisTutos} />
+            <Route path='/resultados' component={Resultados} />
+            <Route path='/tutoscreados' component={TutosCreados} />
+            <Route path='/creartutos' component={CrearTutos} />
+            <Route path='/editartuto' component={EditarTuto} />
+
 
             <Route path='*' component={NotFoundPage} />
                 {/* <Tutos
@@ -150,6 +185,9 @@ export default function AppRouter(){
                 ></Tutos> */}
             
             </Switch>
+            <Chatbot/>
         </Router>
     )
 }
+
+export default AppRouter;

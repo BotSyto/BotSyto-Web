@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import './Question.css'
 
 const Question = ({ data, onAnswerUpdate, numberOfQuestions, activeQuestion, onSetActiveQuestion, onSetStep }) => {
   const [selected, setSelected] = useState('');
@@ -21,7 +22,7 @@ const Question = ({ data, onAnswerUpdate, numberOfQuestions, activeQuestion, onS
   
   const nextClickHandler = (e) => {
     if(selected === '') {
-      return setError('Please select one option!');
+      return setError('Selecciona una opción, por favor!');
     }
     onAnswerUpdate(prevState => [...prevState, { q: data.question, a: selected }]);
     setSelected('');
@@ -33,10 +34,10 @@ const Question = ({ data, onAnswerUpdate, numberOfQuestions, activeQuestion, onS
   }
 
   return(
-    <div className="card">
-      <div className="card-content">
+    <div className="question justify-content-center">
+      <div className="question-card">
         <div className="content">
-          <h2 className="mb-5">{data.question}</h2>
+          <h2 className="mb-1">{data.question}</h2>
           <div className="control" ref={radiosWrapper}>
             {data.choices.map((choice, i) => (
               <label className="radio has-background-light" key={i}>
@@ -45,8 +46,8 @@ const Question = ({ data, onAnswerUpdate, numberOfQuestions, activeQuestion, onS
               </label>
             ))}
           </div>
-          {error && <div className="has-text-danger">{error}</div>}
-          <button className="btn btn-link btn-medium btn-fullwidth mt-4" onClick={nextClickHandler}>Next</button>
+          {error && <div className="text-danger">{error}</div>}
+          <button className="btn btn-secondary btn-medium btn-fullwidth" onClick={nextClickHandler}>Next</button>
         </div>
       </div>
     </div>
