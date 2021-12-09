@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import CardTuto from '../components/CardTuto';
+import Tuto from '../data/tuto.json';
 
 function Tutos(props) {
 
@@ -13,9 +14,18 @@ function Tutos(props) {
 
     return (
         <div className="tutos">
-            <CardTuto
+
+            {Tuto.data.map((titulo)=>{
+                return(
+                <CardTuto
+                    title= {titulo.titulo}
+                    text = {titulo.descripcion}
+                />)
+            })}
+            {/* <CardTuto
                     title="Cálculo de integrales"
                     text="En este tutorial, aprenderás a usar las diversas técnicas que se emplean para el cálculo de integrales"
+                    
                 />
                 <CardTuto
                     title="Cálculo de derivadas"
@@ -52,7 +62,7 @@ function Tutos(props) {
                 <CardTuto
                     title="Biología"
                     text="En este tutorial, aprenderás los conceptos básicos acerca de las ciencias biológicas"
-                />
+                /> */}
         </div>
     )
 }

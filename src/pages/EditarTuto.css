@@ -105,4 +105,7 @@ textarea{
     font-size: 30px;
     color: #fff;
 }
-
+.btn{
+    margin-top:7rem;
+    margin-bottom: 2rem;
+}

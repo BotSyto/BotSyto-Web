@@ -18,10 +18,17 @@ export const Sidebar= [
     },
     {
         title: 'Perfil',
-        path: '/perfil',
+        path: '/perfilalumno',
         icon: <FontAwesomeIcon icon={faUser}/>,
         cName: 'nav-text',
-        kind: ''
+        kind: 'alumno'
+    },
+    {
+        title: 'Perfil',
+        path: '/perfiltutor',
+        icon: <FontAwesomeIcon icon={faUser}/>,
+        cName: 'nav-text',
+        kind: 'tutor'
     },
     {
         title: 'Tutoriales',
@@ -56,7 +63,7 @@ export const Sidebar= [
     },
     {
         title: 'Cerrar Sesión',
-        path: '/iniciarSesion',
+        path: '/inicio',
         icon: <FontAwesomeIcon icon={faDoorClosed}/>,
         cName: 'nav-text-logout',
         kind: ''

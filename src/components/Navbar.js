@@ -7,10 +7,22 @@ import { Sidebar } from './Sidebar';
 import './Navbar.css';
 import { IconContext } from 'react-icons';
 import Title from './Title';
-import Header from './Header';
 
-const kind = 'alumno';
-function Navbar() {
+import { useState, useEffect } from 'react';
+
+//var userCurrent = localStorage.getItem("user") == "" ? "" : JSON.parse(localStorage.getItem("user"));
+
+// const kind = 'tutor';
+export const kind = 'tutor';
+
+function Navbar(props) {
+
+  const [sesion, setSesion] = useState(props.session);
+
+  useEffect(() => {
+        props.onCollapse(sesion);
+      }, [sesion]);
+
   return (
     <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -55,7 +67,11 @@ function Navbar() {
             {Sidebar.map((item, index) => {
               if(item.kind == kind || item.kind == ''){
                 return (
-                  <li key={index} className={item.cName}>
+                  <li key={index} className={item.cName} onClick={() => { 
+                    item.path!="/inicio" ? localStorage.setItem("user", "inicioSesion") : localStorage.setItem("user", "");
+                    setSesion(!sesion); 
+                      }
+                    }>
                     <Link to={item.path}>
                       {item.icon}
                       <span>{item.title}</span>
